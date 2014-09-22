@@ -1,17 +1,13 @@
 var PLAY_PAUSE = "play_pause";
+var NEXT_TRACK = "next_track";
+var PREV_TRACK = "prev_track";
 
 chrome.commands.onCommand.addListener(function(command) {
-  if (command == PLAY_PAUSE) {
-    playPause();
-  }
-})
-
-var playPause = function() {
-  console.log('PLAYPAUSE!');
+  console.log(command);
   findGoogleMusicTab(function(tab) {
-    chrome.tabs.sendMessage(tab.id, { fn: "playPause" }, function() {});
+    chrome.tabs.sendMessage(tab.id, { fn: command }, function() {});
   });
-};
+});
 
 var findGoogleMusicTab = function(callback) {
     chrome.tabs.query({}, function(tabs) {

@@ -9,11 +9,21 @@ $(document).ready(function() {
 
 function init() {
   buttons.playPause = $('[data-id="play-pause"]');
+  buttons.nextTrack = $('[data-id="forward"]');
+  buttons.prevTrack = $('[data-id="rewind"]');
 }
 
 var buttonFns = {
-  playPause: function() {
+  play_pause: function() {
     buttons.playPause.click();
+  },
+
+  next_track: function() {
+    buttons.nextTrack.click();
+  },
+
+  prev_track: function() {
+    buttons.prevTrack.click();
   }
 }
 

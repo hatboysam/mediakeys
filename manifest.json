@@ -37,6 +37,20 @@
       },
       "description": "Play or pause music.",
       "global": true
+    },
+    "next_track": {
+      "suggested_key":{
+        "default": "MediaNextTrack"
+      },
+      "description": "Go to next track.",
+      "global": true
+    },
+    "prev_track": {
+      "suggested_key":{
+        "default": "MediaPrevTrack"
+      },
+      "description": "Go to previous track.",
+      "global": true
     }
   }
 }
