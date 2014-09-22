@@ -19,7 +19,7 @@ var buttonFns = {
 
 chrome.runtime.onMessage.addListener(function(req, sender, sendResponse) {
   // Call the requested function
-  console.log('CALLING: ' + request.fn);
-  var fn = buttonFns[request.fn];
+  console.log('CALLING: ' + req.fn);
+  var fn = buttonFns[req.fn];
   fn.apply(this, []);
 });
